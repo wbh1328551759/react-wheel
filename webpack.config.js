@@ -5,6 +5,9 @@ module.exports = {
   entry: {
     index: "./lib/index.tsx", //入口是 index.tsx
   },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
+  },
   output: {
     path: path.resolve(__dirname, "dist/lib"), //输出的目录
     library: "WR-UI", //库的名字
@@ -24,4 +27,18 @@ module.exports = {
       template: "index.html",
     }),
   ],
+  externals: {
+    react: {
+      commonjs: "react",
+      commonjs2: "react",
+      amd: "react",
+      root: "React",
+    },
+    "react-dom": {
+      commonjs: "react-dom",
+      commonjs2: "react-dom",
+      amd: "react-dom",
+      root: "ReactDOM",
+    },
+  },
 };
