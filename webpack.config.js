@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-  mode: "production", //设置为生产模式，development是开发模式
+  // mode: "production", //设置为生产模式，development是开发模式
   entry: {
     index: "./lib/index.tsx", //入口是 index.tsx
   },
@@ -21,24 +21,24 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "WR-UI",
-      template: "index.html",
-    }),
-  ],
-  externals: {
-    react: {
-      commonjs: "react",
-      commonjs2: "react",
-      amd: "react",
-      root: "React",
-    },
-    "react-dom": {
-      commonjs: "react-dom",
-      commonjs2: "react-dom",
-      amd: "react-dom",
-      root: "ReactDOM",
-    },
-  },
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     title: "WR-UI",
+  //     template: "index.html",
+  //   }),
+  // ],
+  // externals: {
+  //   react: {
+  //     commonjs: "react",
+  //     commonjs2: "react",
+  //     amd: "react",
+  //     root: "React",
+  //   },
+  //   "react-dom": {
+  //     commonjs: "react-dom",
+  //     commonjs2: "react-dom",
+  //     amd: "react-dom",
+  //     root: "ReactDOM",
+  //   },
+  // },
 };
