@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-  // mode: "production", //设置为生产模式，development是开发模式
   entry: {
     index: "./lib/index.tsx", //入口是 index.tsx
   },
@@ -19,26 +18,10 @@ module.exports = {
         test: /\.tsx?$/, //用于匹配 tsx 格式文件
         loader: "awesome-typescript-loader", //将 tsx 文件翻译为 js
       },
+      {
+        test: /\.svg$/,
+        loader: "svg-sprite-loader",
+      },
     ],
   },
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     title: "WR-UI",
-  //     template: "index.html",
-  //   }),
-  // ],
-  // externals: {
-  //   react: {
-  //     commonjs: "react",
-  //     commonjs2: "react",
-  //     amd: "react",
-  //     root: "React",
-  //   },
-  //   "react-dom": {
-  //     commonjs: "react-dom",
-  //     commonjs2: "react-dom",
-  //     amd: "react-dom",
-  //     root: "ReactDOM",
-  //   },
-  // },
 };
