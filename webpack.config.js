@@ -1,5 +1,4 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
     index: "./lib/index.tsx", //入口是 index.tsx
@@ -9,7 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist/lib"), //输出的目录
-    library: "WR-UI", //库的名字
+    library: "wr-ui-wheel", //库的名字
     libraryTarget: "umd", //库的格式
   },
   module: {
