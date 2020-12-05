@@ -5,7 +5,11 @@ import Icon from "./icon";
 
 ReactDom.render(
   <div>
-    <Icon name="wechat" />
+    <Icon name="wechat"
+          // className='ffffff'
+          onClick={(e) => console.log(e)}
+          onMouseDown={() => console.log('mouseDown')}
+          onMouseMove={() => console.log('move')}/>
     <Icon name="alipay" />
     <Icon name="QQ" />
   </div>,

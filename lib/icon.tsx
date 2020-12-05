@@ -1,17 +1,16 @@
-import React from "react";
-import "./importIcons";
-
-interface IconProps {
+import React from 'react';
+import './importIcons';
+import classes from './helpers/classes';
+interface IconProps extends React.SVGAttributes<SVGElement> {
   name: string;
 }
 
-const Icon: React.FC<IconProps> = (props) => {
+const Icon: React.FC<IconProps> = ({className, name, ...restProps}: IconProps) => {
   return (
-    <span>
-      <svg>
-        <use xlinkHref={`#${[props.name]}`} />
-      </svg>
-    </span>
+    <svg className={classes('wr-icon', className)}
+         {...restProps}>
+      <use xlinkHref={`#${[name]}`}/>
+    </svg>
   );
 };
 
