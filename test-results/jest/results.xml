@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="8" failures="0" time="11.091">
-  <testsuite name="测试用例测试" errors="0" failures="0" skipped="0" timestamp="2020-12-09T16:14:25" time="3.522" tests="1">
-    <testcase classname="测试用例测试 1等于1" name="测试用例测试 1等于1" time="0.006">
+<testsuites name="jest tests" tests="8" failures="0" time="5.654">
+  <testsuite name="测试用例测试" errors="0" failures="0" skipped="0" timestamp="2020-12-10T16:53:27" time="2.373" tests="1">
+    <testcase classname="测试用例测试 1等于1" name="测试用例测试 1等于1" time="0.004">
     </testcase>
   </testsuite>
-  <testsuite name="button" errors="0" failures="0" skipped="0" timestamp="2020-12-09T16:14:25" time="3.652" tests="1">
-    <testcase classname="button 是个 div" name="button 是个 div" time="0.031">
+  <testsuite name="button" errors="0" failures="0" skipped="0" timestamp="2020-12-10T16:53:27" time="2.432" tests="1">
+    <testcase classname="button 是个 div" name="button 是个 div" time="0.021">
     </testcase>
   </testsuite>
-  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2020-12-09T16:14:25" time="3.693" tests="5">
-    <testcase classname="classes 接受一个 className" name="classes 接受一个 className" time="0.004">
+  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2020-12-10T16:53:27" time="2.475" tests="5">
+    <testcase classname="classes 接受一个 className" name="classes 接受一个 className" time="0.003">
     </testcase>
     <testcase classname="classes 接受两个 className" name="classes 接受两个 className" time="0">
     </testcase>
     <testcase classname="classes 接受 undefined ，但是不会出现 undefined" name="classes 接受 undefined ，但是不会出现 undefined" time="0.001">
     </testcase>
-    <testcase classname="classes 接受各种奇怪的 class" name="classes 接受各种奇怪的 class" time="0">
+    <testcase classname="classes 接受各种奇怪的 class" name="classes 接受各种奇怪的 class" time="0.001">
     </testcase>
     <testcase classname="classes 没有参数" name="classes 没有参数" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2020-12-09T16:14:25" time="7.123" tests="1">
-    <testcase classname="icon render successfully" name="icon render successfully" time="0.018">
+  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2020-12-10T16:53:27" time="2.505" tests="1">
+    <testcase classname="icon render successfully" name="icon render successfully" time="0.016">
     </testcase>
   </testsuite>
 </testsuites>
