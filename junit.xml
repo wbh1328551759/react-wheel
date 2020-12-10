@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="8" failures="0" errors="0" time="5.743">
-  <testsuite name="测试用例测试" errors="0" failures="0" skipped="0" timestamp="2020-12-09T16:00:43" time="3.073" tests="1">
-    <testcase classname="测试用例测试 1等于1" name="测试用例测试 1等于1" time="0.004">
+<testsuites name="jest tests" tests="8" failures="0" time="17.246">
+  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2020-12-10T15:51:51" time="9.738" tests="1">
+    <testcase classname="icon render successfully" name="icon render successfully" time="0.01">
     </testcase>
   </testsuite>
-  <testsuite name="button" errors="0" failures="0" skipped="0" timestamp="2020-12-09T16:00:43" time="3.181" tests="1">
-    <testcase classname="button 是个 div" name="button 是个 div" time="0.029">
-    </testcase>
-  </testsuite>
-  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2020-12-09T16:00:43" time="3.169" tests="5">
-    <testcase classname="classes 接受一个 className" name="classes 接受一个 className" time="0.004">
+  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2020-12-10T15:52:01" time="0.236" tests="5">
+    <testcase classname="classes 接受一个 className" name="classes 接受一个 className" time="0">
     </testcase>
     <testcase classname="classes 接受两个 className" name="classes 接受两个 className" time="0">
     </testcase>
-    <testcase classname="classes 接受 undefined ，但是不会出现 undefined" name="classes 接受 undefined ，但是不会出现 undefined" time="0.001">
+    <testcase classname="classes 接受 undefined ，但是不会出现 undefined" name="classes 接受 undefined ，但是不会出现 undefined" time="0">
     </testcase>
     <testcase classname="classes 接受各种奇怪的 class" name="classes 接受各种奇怪的 class" time="0">
     </testcase>
     <testcase classname="classes 没有参数" name="classes 没有参数" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2020-12-09T16:00:43" time="3.245" tests="1">
-    <testcase classname="icon render successfully" name="icon render successfully" time="0.022">
+  <testsuite name="button" errors="0" failures="0" skipped="0" timestamp="2020-12-10T15:52:01" time="0.269" tests="1">
+    <testcase classname="button 是个 div" name="button 是个 div" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="测试用例测试" errors="0" failures="0" skipped="0" timestamp="2020-12-10T15:52:01" time="0.215" tests="1">
+    <testcase classname="测试用例测试 1等于1" name="测试用例测试 1等于1" time="0">
     </testcase>
   </testsuite>
 </testsuites>
