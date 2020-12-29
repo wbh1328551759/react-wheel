@@ -8,6 +8,7 @@ export const Mask = styled.div`
     left: 0;
     top: 0;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
 `;
 
@@ -20,7 +21,8 @@ export const Content = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    z-index: 2;
+    
     .wr-ui-dialog-close {
       position: absolute;
       bottom: 100%;
