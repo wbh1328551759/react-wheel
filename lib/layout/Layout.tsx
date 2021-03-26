@@ -45,21 +45,27 @@ const LayoutWrapper = styled.div`
   .wr-ui-header, .wr-ui-footer{
     background: #7dbceb;
   }
-`
-interface Props extends React.HTMLAttributes<HTMLElement>{
+`;
+
+interface Props extends React.HTMLAttributes<HTMLElement> {
   children: ReactElement | Array<ReactElement>;
 }
 
 function Layout({className = '', style, children}: Props): React.ReactElement<Props> {
-  const childrenAsArray = children as Array<ReactElement>
+  const childrenAsArray = children as Array<ReactElement>;
   const hasAside = 'length' in childrenAsArray &&
-    childrenAsArray.reduce((result, element) => result || element.type === Aside, false)
+    childrenAsArray.reduce((result, element) => result || element.type === Aside, false);
 
   return (
-    <LayoutWrapper className={`wr-ui-layout ${className}${hasAside?'hasAside':''}`} style={style}>
+    <LayoutWrapper className={`wr-ui-layout ${className}${hasAside ? 'hasAside' : ''}`} style={style}>
       {children}
     </LayoutWrapper>
   );
 }
 
 export default Layout;
+export { Layout };
+export { default as Header } from './Header';
+export { default as Content } from './Content';
+export { default as Aside } from './Aside';
+export { default as Footer } from './Footer';

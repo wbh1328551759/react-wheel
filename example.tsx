@@ -1,21 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import ReactDOM from 'react-dom';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import IconExample from './lib/icon/icon.example';
 import ButtonExample from './lib/button.example';
 import DialogExample from './lib/dialog/dialog.example';
 import LayoutExample from './lib/layout/Layout.example';
+import { Layout, Aside, Header, Content, Footer } from './lib/layout/Layout';
+import './example.scss'
 
 ReactDOM.render((
   <Router>
-    <div>
-      <header>
+    <Layout className="page">
+      <Header style={{background: 'none'}}>
         <div className="logo">
-          你好
+          <img src="./logo.png" width={200} alt=""/>
         </div>
-      </header>
-      <div>
-        <aside>
+      </Header>
+      <Layout>
+        <Aside>
           <h2>组件</h2>
           <ul>
             <li>
@@ -31,14 +33,17 @@ ReactDOM.render((
               <Link to={'/layout'}>Layout</Link>
             </li>
           </ul>
-        </aside>
-        <main>
+        </Aside>
+        <Content>
           <Route path={'/icon'} component={IconExample}/>
           <Route path={'/button'} component={ButtonExample}/>
           <Route path={'/dialog'} component={DialogExample}/>
           <Route path={'/layout'} component={LayoutExample}/>
-        </main>
-      </div>
-    </div>
+        </Content>
+      </Layout>
+      <Footer>
+        footer
+      </Footer>
+    </Layout>
   </Router>
-), document.querySelector('#root'))
+), document.querySelector('#root'));
