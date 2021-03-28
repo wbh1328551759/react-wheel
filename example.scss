@@ -1,4 +1,6 @@
-*{
+$main-color: #532e2e;
+$border-color: #eeeeee;
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,4 +14,89 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-size: 16px;
+}
+
+.site-page {
+  background: #ffffff;
+}
+
+.site-header {
+  background: $border-color !important;
+  margin-bottom: 0;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: $main-color;
+      font-size: 32px;
+    }
+  }
+}
+
+.site-main, .site-aside, .site-footer {
+  background: transparent !important;
+}
+
+.site-main {
+  padding-left: 16px;
+  color: #666;
+  pre{
+    color: $main-color;
+  }
+}
+
+.site-aside {
+  border: 2px solid $border-color;
+  margin-right: 40px;
+
+  h2 {
+    padding: 16px 42px;
+    font-size: 18px;
+    color: $main-color;
+  }
+
+  ul {
+    min-width: 15px;
+
+    > li {
+      a {
+        padding: 8px 42px;
+        color: $main-color;
+        display: block;
+
+        &:hover {
+          color: #009aae;
+        }
+
+        &.active {
+          color: white;
+          background: #7dbceb;
+
+        }
+      }
+    }
+  }
+}
+
+.site-footer {
+  margin-top: 0 !important;
+  border: 1px solid $border-color;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  padding: 12px 0;
+}
 
