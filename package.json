@@ -8,6 +8,7 @@
     "/dist/**/*"
   ],
   "scripts": {
+    "doc": "cross-env NODE_ENV=production webpack --config webpack.config.doc.js",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
     "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
@@ -43,6 +44,7 @@
     "html-webpack-plugin": "^4.5.0",
     "jest": "^26.6.3",
     "jest-junit": "6.3.0",
+    "prism-react-renderer": "^1.2.0",
     "raw-loader": "^4.0.2",
     "react-test-renderer": "^17.0.1",
     "sass": "^1.30.0",

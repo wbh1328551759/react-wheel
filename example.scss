@@ -29,6 +29,7 @@ body {
 
 .site-page {
   background: #ffffff;
+  min-height: 100vh;
 }
 
 .site-header {
@@ -55,6 +56,7 @@ body {
   color: #666;
   pre{
     color: $main-color;
+    font-family: "Fira Code", Consolas, monospace;
   }
 }
 
@@ -100,3 +102,6 @@ body {
   padding: 12px 0;
 }
 
+.example{
+  padding: 16px 0;
+}
