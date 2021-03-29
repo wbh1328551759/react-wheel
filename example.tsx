@@ -14,7 +14,7 @@ ReactDOM.render((
     <Layout className="site-page">
       <Header className="site-header">
         <div className="logo">
-          <img src="logo.png" width={120} alt=""/>
+          <img src="./logo.png" width={120} alt=""/>
           <span>A useful UI framework</span>
         </div>
       </Header>
