@@ -1,0 +1,27 @@
+.wr-button{
+  padding: 4px 10px;
+  line-height: 22px;
+  transition: all .5s;
+  cursor: pointer;
+  &:focus{
+    outline: none;
+  }
+  &-normal{
+    color: #333;
+    border: 1px solid lighten(#333, 50%);
+    background: white;
+    &:hover, &:focus{
+      border-color: #ff5757;
+      color: #ff5757;
+    }
+  }
+  &-important{
+    color: white;
+    border: 1px solid #ff5757;
+    background: #ff5757;
+    &:hover, &:focus{
+      background: lighten(#ff5757, 10%);
+      border-color: lighten(#ff5757, 10%);
+    }
+  }
+}
