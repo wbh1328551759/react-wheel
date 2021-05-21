@@ -1,12 +1,13 @@
 import React from 'react';
 import Input from '../input/Input';
 import classes from '../helpers/classes';
-import './form.scss'
+import './form.scss';
+
 export interface FormValue {
   [K: string]: any
 }
 
-interface FieldItem{
+interface FieldItem {
   name: string;
   label: string;
   input: { type: string };
@@ -19,9 +20,10 @@ interface FormProps {
   onSubmit: React.FormEventHandler<HTMLFormElement>;
   onChange: (value: FormValue) => void;
   errors: { [K: string]: string[] };
+  transformError?: (message: string) => string;
 }
 
-const Form: React.FC<FormProps> = ({formData, fields, buttons, onSubmit, onChange, errors}: FormProps) => {
+const Form: React.FC<FormProps> = ({formData, fields, buttons, onSubmit, onChange, errors, transformError}: FormProps) => {
   const submit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     onSubmit(e);
@@ -31,9 +33,19 @@ const Form: React.FC<FormProps> = ({formData, fields, buttons, onSubmit, onChang
     onChange(newFormValue);
   };
 
+  const transformMessage = (message: string) => {
+    const map: any = {
+      required: '必填',
+      minLength: '太短了',
+      maxLength: '太长了'
+    }
+    return (transformError && transformError(message)) || map[message] || ''
+  }
+
   return (
     <form onSubmit={submit}>
       <table className='wr-form-table'>
+        <tbody>
         {fields.map((f: FieldItem) => (
           <tr className={classes('wr-form-tr')} key={f.name}>
             <td className='wr-form-td'>
@@ -48,7 +60,11 @@ const Form: React.FC<FormProps> = ({formData, fields, buttons, onSubmit, onChang
                   onInputChange(f.name, e.target.value)
                 }/>
             </td>
-            <div className='wr-form-error'>{errors[f.name]?.join(', ')}</div>
+            <td className='wr-form-error'>
+              {/*<div className='wr-form-error'>*/}
+                {transformMessage(errors[f.name] && errors[f.name][0])}
+              {/*</div>*/}
+            </td>
           </tr>
         ))}
         <tr className='wr-form-tr'>
@@ -57,6 +73,7 @@ const Form: React.FC<FormProps> = ({formData, fields, buttons, onSubmit, onChang
             {buttons}
           </td>
         </tr>
+        </tbody>
       </table>
     </form>
   );

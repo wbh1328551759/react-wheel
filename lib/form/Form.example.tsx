@@ -3,14 +3,13 @@ import React, { useState } from 'react';
 import Validator, { noError } from './validator';
 import Button from '../button/Button';
 
-const userNames = ['bob', 'jack', 'sina', 'mono']
+const userNames = ['bob', 'ccccccccccc','jack', 'sina', 'mono']
 const checkUserName = (userName: string, success: () => void, fail: () => void) => {
   setTimeout(() => {
-    console.log('userNames.indexOf(userName) >= 0', userNames.indexOf(userName) >= 0)
     if(userNames.indexOf(userName) >= 0){
-      fail()
-    }else {
       success()
+    }else {
+      fail()
     }
   }, 1000)
 }
@@ -44,6 +43,7 @@ const FormExample: React.FC = () => {
       {key: 'password', required: true},
       {key: 'password', minLength: 8, maxLength: 16},
     ];
+    console.log('rules', rules)
     Validator(formData, rules, (errors) => {
       console.log(errors)
       setErrors(errors);
@@ -52,6 +52,12 @@ const FormExample: React.FC = () => {
       }
     });
   };
+  const transformError = (message: string) => {
+    const map: any = {
+      unique: '用户名已存在'
+    }
+    return map[message]
+  }
 
   return (
     <Form formData={formData}
@@ -65,6 +71,7 @@ const FormExample: React.FC = () => {
           errors={errors}
           onChange={(newValue) => setFormData(newValue)}
           onSubmit={onSubmit}
+          transformError={transformError}
     />
   );
 };
